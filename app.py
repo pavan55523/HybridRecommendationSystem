@@ -11,8 +11,8 @@ app = Flask(__name__)
 with open('content.pkl', 'rb') as f:
     books_data = pickle.load(f)
 # all data about bx-datasets for collaborative
-with open('collab.pkl', "rb") as g:
-    loaded_list = pickle.load(g)
+with open('collab.pkl', "rb") as f:
+    loaded_list = pickle.load(f)
 # combined titles data
 # loading all titles pkl file
 with open('titles.pkl', "rb") as t:
