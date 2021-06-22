@@ -104,7 +104,7 @@ def recommend():
         selected_book_image = book_data.loc[selected_title_index, 'image']
         selected_book_summary = book_data.loc[selected_title_index, 'summary']
         selected_book_similar = book_data.loc[selected_title_index, 'cosine']
-        print("content based similar books:", selected_book_similar)
+        # print("content based similar books:", selected_book_similar)
         selected_book_similar = selected_book_similar[0:content_reco]
         poster_list = []
         book_titles_list = []
@@ -135,7 +135,7 @@ def recommend():
         for i in range(0, len(distances.flatten())):
             selected_book_similar_titles.append(df.index[indices.flatten()[i]])
         selected_book_similar = selected_book_similar_titles[:collaborative_reco]
-        print("collaborative based similar books titles:", selected_book_similar)
+        # print("collaborative based similar books titles:", selected_book_similar)
         poster_list_collaborative = []
         book_titles_list_collaborative = []
         book_cards = {}
@@ -168,11 +168,11 @@ def recommend():
         selected_book_similar_content = book_data.loc[ind_content, 'cosine']
         selected_book_similar_content = selected_book_similar_content[0:content_reco]
         # print("content cosine values indexes:", selected_book_similar_content)
-        print("Details of input book:")
-        print("Book title: ", selected_book_title)
-        print("ISBN number: ", selected_book_isbn)
-        print(" Author: ", selected_book_author)
-        print("Summary: ", selected_book_summary)
+        # print("Details of input book:")
+        # print("Book title: ", selected_book_title)
+        # print("ISBN number: ", selected_book_isbn)
+        # print(" Author: ", selected_book_author)
+        # print("Summary: ", selected_book_summary)
 
         # retrieving collaborative based 5 recos
         distances, indices = knn_model.kneighbors(df.iloc[selected_title_index, :].values.reshape(1, -1), n_neighbors=5)
@@ -186,7 +186,7 @@ def recommend():
         for i in selected_book_similar_content:
             poster_list_content.append(book_data.loc[i, 'image'])
             book_titles_list_content.append(book_data.loc[i, 'title'])
-        print("similar_books_content", book_titles_list_content)
+        # print("similar_books_content", book_titles_list_content)
 
         # for collaborative based
         poster_list_collaborative = []
@@ -195,7 +195,7 @@ def recommend():
             ind = books[books['title'] == i].index[0]
             poster_list_collaborative.append(books.loc[ind, 'image_url'])
             book_titles_list_collaborative.append(books.loc[ind, 'title'])
-        print("similar_books_collab:", book_titles_list_collaborative)
+        # print("similar_books_collab:", book_titles_list_collaborative)
 
         # forming a dictionary of poster and titles
         book_cards = {}
