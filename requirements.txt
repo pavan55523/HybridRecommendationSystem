@@ -2,14 +2,12 @@ absl-py==0.12.0
 astunparse==1.6.3
 beautifulsoup4==4.8.0
 bs4==0.0.1
-cffi==1.14.0
 chardet==4.0.0
 click==8.0.0
 colorama==0.4.4
 Flask==2.0.0
 flatbuffers==1.12
 gast==0.3.3
-google==2.0.2
 google-pasta==0.2.0
 gunicorn==19.9.0
 idna==2.10
@@ -29,10 +27,8 @@ oauthlib==3.1.0
 pandas==1.2.4
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAutoGUI==0.9.50
 pycparser==2.20
 pyDH==0.1.5
-PyGetWindow==0.0.8
 PyMsgBox==1.0.8
 pyperclip==1.8.0
 PyRect==0.1.4
