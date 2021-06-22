@@ -71,7 +71,6 @@ tensorboard-plugin-wit==1.8.0
 tensorflow-estimator==2.4.0
 tensorflow-gpu==2.5.0
 tensorflow-hub==0.12.0
-tensorflow-text==2.4.3
 termcolor==1.1.0
 threadpoolctl==2.1.0
 tqdm==4.60.0
